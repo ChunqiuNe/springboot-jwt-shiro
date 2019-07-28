@@ -56,7 +56,7 @@ public class WebController {
         return new ResponseBean(200, "You are authenticated", null);
     }
     //拥有admin权限可以查看
-    @RequestMapping("admin")
+    @RequestMapping("require_role")
     @RequiresRoles("admin")
     public ResponseBean requireRole() {
         return new ResponseBean(200, "You are visiting require_role", null);
